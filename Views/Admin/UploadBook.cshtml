@@ -1,0 +1,52 @@
+﻿@model UploadBookVM
+<div class="Center col-md-6 mt-2 lb BorRadius p-5">
+    <form enctype="multipart/form-data" asp-controller="Admin" asp-action="UploadBook" method="post">
+        <h4>Upload New Book.</h4>
+        <hr />
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="@Model.BookName"></label>
+            <input asp-for="@Model.BookName" class="form-control" />
+            <span asp-validation-for="@Model.BookName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Author"></label>
+            <input asp-for="@Model.Author" class="form-control" />
+            <span asp-validation-for="@Model.Author" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Genre"></label>
+            <select asp-for="@Model.Genre" class="form-control">
+                <option value="sport" class="form-control">Sport Book</option>
+                <option value="Scince" class="form-control">Scince Book</option>
+                <option value="Cooking" class="form-control">Cooking Book</option>
+                <option value="Geography" class="form-control">Geography Book</option>
+            </select>
+            <span asp-validation-for="@Model.Genre" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Pages"></label>
+            <input asp-for="@Model.Pages" class="form-control" />
+            <span asp-validation-for="@Model.Pages" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="@Model.Book"></label>
+            <div class="custom-file">
+                <input asp-for="@Model.Book" class="form-control custom-file-input" />
+                <label class="custom-file-label">Choose File....</label>
+            </div>            
+        </div>
+        <button type="submit" class="btn btn-sm btn-secondary">Upload</button>
+    </form>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('.custom-file-input').on("change", function () {                  
+                var name = $(this).val().split("\\").pop();
+                $(this).next(".custom-file-label").html(name);
+            });
+        });
+    </script>
+}

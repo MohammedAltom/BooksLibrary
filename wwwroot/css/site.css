@@ -1,0 +1,155 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+html, body {
+    background: rgba(140,95,3,0.9780287114845938);
+}
+
+body {
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+*{
+    transition: .3s;
+}
+
+.OverFlowY{
+    overflow-y: scroll;
+}
+
+.DetailsCont{
+    max-height:800px;
+}
+.InlineBlock {
+    display: inline-block;
+}
+
+.Center{
+    margin:0px auto;
+}
+
+.Logo {
+    max-width: 100px;
+    max-height: 50px;
+    border-radius: 5px;
+}
+
+.HeadCont {
+    background: linear-gradient(360deg,#4d2d00, rgba(140,95,3,0.9780287114845938) 35%);
+    padding: 20px;
+    border-bottom: solid black thin;
+}
+
+.Title {
+    font-family: serif;
+    margin: 0px auto;
+    text-shadow: 0px 0px 5px white;
+}
+
+.Container {
+    width: 90%;
+    margin: 0px auto;
+    padding-top: 5px;
+}
+
+.Nav {
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: #e8d1a9;
+    box-shadow: 0px 5px 15px white;
+    font-family:serif;
+}
+
+.Serif {
+    font-family: serif;
+}
+
+.lb {
+    background-color: #e8d1a9;
+}
+.BorRadius{
+  border-radius: 5px;
+}
+.BooksCont {
+    padding: 30px;
+}
+
+.BookCont {
+    border: solid thin gray;
+    border-radius: 5px;
+    width: 160px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0px 10px 15px 2px grey;
+    margin: 3px 10px 3px 10px;
+    background-color: #e8d1a9;
+
+    transition : .5s;
+}
+    .BookCont:hover {
+        background-color: #c4ab7e;
+    }
+
+.BookSym {
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        padding: 15px;
+}
+
+.BookP {
+    color: white;
+    font-family: serif;
+}
+.PDFCont{
+    text-align:center;
+    padding-top: 5px;
+}
+.PDF {
+    margin-top: 10px;
+    margin: 0px auto;
+    height: 700px;
+    width: 70%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.PDFHeader {
+    font-family: serif;
+    margin: 0px auto;
+    margin-top:30px;
+    text-shadow: 0px 0px 5px white;
+}
+.NoBook {
+    font-family: serif;
+    text-align:center;
+    text-shadow: 0px 0px 5px white;
+}

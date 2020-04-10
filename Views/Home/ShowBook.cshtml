@@ -1,0 +1,13 @@
+﻿@model Book
+
+@{
+    ViewData["Title"] = @Model.BookName;
+}
+
+<partial name="_NavPartial" />
+<div class="text-center">
+    <h4 class="PDFHeader">@Model.BookName</h4>
+</div>
+<div class="PDFCont">
+    <embed class="PDF" src="@Model.BookURL" alt="pdf" pluginspage="http://www.adobe.com/products/acrobat/readstep2.html">
+</div>
